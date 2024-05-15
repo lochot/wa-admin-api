@@ -8,12 +8,12 @@ Here is a POC for workadventure with admin API
 
 
 ### Steps :
-1. cp .env.prod.template to .env
-2. edit .env
-3. fill .env with your own domain
-4. run docker-compose up -d
-5. enjoy !
-
+1. clone this repo 
+2. cp .env.prod.template to .env
+3. edit .env
+4. fill .env with your own domain
+5. run docker-compose up -d
+6. enjoy !
 
 **Be careful of new env for admin**   
 YOUR_DEFAULT_MAP : (full url of the map)  
