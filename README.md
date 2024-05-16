@@ -8,21 +8,31 @@ Here is a POC for workadventure with admin API
 
 
 ### Steps :
-1. clone this repo 
-2. cp .env.prod.template to .env
-3. edit .env
-4. fill .env with your own domain
+1. cp .env.prod.template to .env
+2. edit .env
+3. just fill DOMAIN=workadventure.localhost with your own domain (play.yourdomain.tld)
+4. save the file
 5. run docker-compose up -d
-6. enjoy !
-
-**Be careful of new env for admin**   
-YOUR_DEFAULT_MAP : (full url of the map)  
-ADMIN_LOADING_LOGO : (full url of an image that will be show in loading)  
-ADMIN_MENU_LOGO : (full url of image that will be the menu icon)  
-
-**Be carefull to use a json map (not a tmj)**  
--> that is because api has to select what type we need (mapUrl or wamUrl) and i do this repo just for helping, so it is not complete ;)
-
-if you need something more, go ask on the [workadventure discord](https://discord.gg/G6Xh9ZM9aR)
+6. Open browser on play.yourdomain.tld (or whtever you choose)
+7. enjoy !
 
 
+## What will be done ?
+ - you are admin
+ - you can edit your map
+ - some entities from limzu are available on the map
+
+## Because admin is only a POC ?
+ - every user is admin
+ - only one map is available
+
+
+## Knew issues
+broken pipe, adress already in use   
+--> please docker-compose down before docker-compose up -d   
+
+404, or map not found orsomethings like this  
+--> Please be patient after launching docker-compose up -d, and refresh your page  
+
+when i use docker-compose up -d, i see a lot of error   
+--> try with sudo docker-compose up -d
