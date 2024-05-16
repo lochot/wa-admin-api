@@ -22,9 +22,13 @@ Here is a POC for workadventure with admin API
  - you can edit your map
  - some entities from limzu are available on the map
 
-## Because admin is only a POC ?
+## Because admin is only a POC :
  - every user is admin
  - only one map is available
+ - it is NOT an full admin usable, just an example on how to create your own with javascript
+
+## what can i do after that ?
+ - reading the workadventure doc [here](https://github.com/workadventure/workadventure/blob/develop/docs/others/self-hosting/adminAPI.md) and take a look at the swagger [here](https://play.workadventu.re/swagger-ui/#/ExternalAdminAPI/get_api_mapinformation)
 
 
 ## Knew issues
