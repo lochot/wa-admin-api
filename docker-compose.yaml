@@ -55,7 +55,7 @@ services:
       - CHAT_URL=/chat/
       - INTERNAL_MAP_STORAGE_URL=http://map-storage:3000
       - PUBLIC_MAP_STORAGE_URL=https://${DOMAIN}/map-storage
-      - START_ROOM_URL
+      - START_ROOM_URL=/_/global/${DOMAIN}/map-storage/base/map.tmj
       - OPID_PROMPT=login
       - OPID_WOKA_NAME_POLICY
       - OPID_CLIENT_ID
@@ -318,7 +318,8 @@ services:
       SENTRY_TRACES_SAMPLE_RATE: $SENTRY_TRACES_SAMPLE_RATE
       PATH_PREFIX: "/map-storage"
     volumes:
-      - map-storage-data:/maps
+#      - map-storage-data:/maps
+      - ${DATA_DIR}/map-storage/:/maps/
     labels:
       traefik.enable: "true"
       traefik.http.middlewares.strip-map-storage-prefix.stripprefix.prefixes: "/map-storage"
@@ -341,9 +342,9 @@ services:
      - ./admin:/usr/src/app
     environment:
       ADMIN_URL: "https://$DOMAIN/admin"
-      YOUR_DEFAULT_MAP: "$YOUR_DEFAULT_MAP"
-      ADMIN_LOADING_LOGO: "$ADMIN_LOADING_LOGO"
-      ADMIN_MENU_LOGO: "$ADMIN_MENU_LOGO"
+      YOUR_DEFAULT_MAP: "https://${DOMAIN}/map-storage/base/map.wam"
+      ADMIN_LOADING_LOGO: "https://${DOMAIN}/map-storage/img/logo.jpg"
+      ADMIN_MENU_LOGO: "https://${DOMAIN}/map-storage/img/menu.png"
     labels:
       traefik.enable: "true"
       traefik.http.middlewares.strip-map-storage-prefix.stripprefix.prefixes: "/admin"

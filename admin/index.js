@@ -38,8 +38,10 @@ app.get("/api/companion/list", (req, res) => {
 app.get("/api/map", (req, res) => {
     console.debug("Receive map request with parameters:", req.query)
 console.debug("ADMIN_LOADING_LOGO: "+ADMIN_LOADING_LOGO);
+console.debug("YOUR_DEFAULT_MAP: "+YOUR_DEFAULT_MAP);
     res.send(JSON.stringify({
-	mapUrl: YOUR_DEFAULT_MAP,
+//	mapUrl: YOUR_DEFAULT_MAP,
+	wamUrl: YOUR_DEFAULT_MAP,
         group : "wa",
         authenticationMandatory: false,
         redirectUrl: null,

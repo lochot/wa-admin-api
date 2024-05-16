@@ -1,0 +1,15 @@
+{
+  "version": "5f72dfe298ce65c4aaf5fe6f8fc1d7635523740753d6e9428233988bdeee3948",
+  "maps": {
+    "base/conference.wam": {
+      "mapUrl": "./conference.tmj"
+    },
+    "base/map.wam": {
+      "mapUrl": "./map.tmj",
+      "metadata": {
+        "areasSearchable": 0,
+        "entitiesSearchable": 0
+      }
+    }
+  }
+}
